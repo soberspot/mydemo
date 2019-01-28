@@ -1,6 +1,7 @@
 .idea
 *.pyc
 /build/*
+venv
 *.qmlc
 project.db
 /mydemo/setting.py

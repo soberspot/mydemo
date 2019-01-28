@@ -111,6 +111,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+   # 'grappelli',
     'django.contrib.admin',
     'django.contrib.sites',
     'django.contrib.sitemaps',
