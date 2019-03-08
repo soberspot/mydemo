@@ -1,7 +1,11 @@
 .idea
 *.pyc
+*~
+__pycache__
 /build/*
 venv
 *.qmlc
 project.db
-/mydemo/setting.py
+/mydemo/settings.py
+/static
+settings.py
