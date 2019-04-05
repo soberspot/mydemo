@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>     <!-- Техническая информация о документе -->
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,26 +10,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% block title %}
-        
-        
-        
-        {% endblock title %}</title>
+    <title>{% block title %}Сайт ООО "Южно-региональная экспертная группа" {% endblock title %}</title>
 
     <!-- Bootstrap Core CSS -->
     
     <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Темы  CSS -->
+    <!-- Theme CSS -->
     <link href="{{ STATIC_URL }}css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="{{ STATIC_URL }}css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    
     {% render_block "css" %}
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,10 +34,8 @@
 
 </head>
 
-<body>  
-
+<body>
 {% cms_toolbar %}
-
 
 
 
@@ -56,25 +48,19 @@
                     <span class="sr-only">Меню</span>
                     Меню <i class="fa fa-bars"></i>
                 </button>
-                <!-- Текс на странице -->
-                <a class="navbar-brand" href="/">Экспертные исследования</a>
+                <a class="navbar-brand" href="/">ООО "Южно-региональная экспертая группа"</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                  <!----Блок меню Dljango -->  
-                  {% show_menu 0 100 100 100 %}
+                    {% show_menu 0 100 100 100 %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
-
-
-
-
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
@@ -94,33 +80,14 @@
     </header>
     {% endblock header %}
 
-
-
-     <!-- Карусель -->
-
-     <div class="carousel-inner" role="listbox">
-        {% for slider in sliders%}        
-            <div class="item{% if forloop.first %} active{% endif %}">                    
-                  <img src="{{slider.image.url}}" alt="Chania">
-                  <div class="carousel-caption capt">
-                      <h1>{{slider.caption}}</h1>
-                  </div>
-            </div>
-        {%endfor%}
-    </div>
-
-
     <!-- Main Content -->
     <div class="container">
-        {% block content %}
-        {% placeholder "feature" %}
-        {% placeholder "content" %}
-        {% placeholder "splashbox" %}
-        {% endblock content %}
+        {% block content %}{% endblock content %}
     </div>
 
     <hr>
 
+    
 
 
     <!-- Footer -->
@@ -170,7 +137,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">М.А., 2019 &copy; {% static_placeholder "copyright" %}</p>
+                    <p class="copyright text-muted">Copyright, 2019 &copy; {% static_placeholder "copyright" %}</p>
                 
                 </div>
             
@@ -182,14 +149,13 @@
   <!-- Блок адреса внизу страницы -->
   <div align="right">
 <address>
-  <strong>   ИП Мраморнов А.В.</strong><br>
-    <strong></strong><br>
+  <strong>   ООО "ЮРЭКС"</strong><br>
+  <strong></strong><br>
      Ростовское шоссе, 13 км<br>
-     г. Краснодар<br>
+     Краснодар<br>
   <abbr title="Phone">   т:</abbr> +7 (918) 451-66-11<br>
   <a href="mailto:#">   4516611@gmail.com</a>
 </address>
-<a href="https://cloud.degoo.com/drive-mfo2pxuj5a0t" target="_blank"><img src="http://degoo.com/Content/Images/Banner/Degoo-h1.png" alt="100 GB Free Backup"/></a>
 </div>
 
 
