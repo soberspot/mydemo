@@ -22,12 +22,15 @@
 
     <!-- Темы  CSS -->
     <link href="{{ STATIC_URL }}css/clean-blog.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/mycss.css" rel="stylesheet" type="text/css">
+
 
     <!-- Custom Fonts -->
     <link href="{{ STATIC_URL }}css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+
     {% render_block "css" %}
 
 
@@ -42,10 +45,14 @@
 
 <body>  
 
+
 {% cms_toolbar %}
 
-
-
+<!---
+<input type="checkbox" id="toggleMode">
+<label for="toggleMode" class="toggleDark">Dark Mode</label>
+<label for="toggleMode" class="toggleLight">Light Mode</label>
+-->
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -56,7 +63,7 @@
                     <span class="sr-only">Меню</span>
                     Меню <i class="fa fa-bars"></i>
                 </button>
-                <!-- Текс на странице -->
+                <!-- Текст на странице -->
                 <a class="navbar-brand" href="/">Экспертные исследования</a>
             </div>
 
@@ -94,6 +101,9 @@
 
 
 
+
+
+
      <!-- Карусель -->
 
      <div class="carousel-inner" role="listbox">
@@ -119,8 +129,37 @@
 
     <hr>
 
+<!-- Main Content - вставка из шаблона codepen
+<h3>Добавляем текст</h3>
 
+<p>&nbsp;</p>
 
+<div id="container1">
+<div class="panel">
+<div class="image" style="">&nbsp;</div>
+
+<div class="content">
+<h2>This is a title</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ullamcorper erat quis faucibus pulvinar. Duis vel ex non sem ultricies consectetur. Donec blandit dolor ac libero euismod, sit amet blandit libero scelerisque.</p>
+<button>Read more</button></div>
+
+<div style="clear: both;">&nbsp;</div>
+</div>
+</div>
+
+<p>&nbsp;</p>
+
+<!-- end Main Content -->
+
+<!-- Тестовое дополнение с использованием css/mycss.css-->
+<div class="cont_1">
+  <div class="left_1">leftдеаереу</div>
+  <div class="middle_1">middle</div>
+  <div class="right_1">right</div>
+</div>
+
+<div id="commento"> </div>
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -191,6 +230,9 @@
 </div>
 
 
+  <!-- Комментарии   comento -->
+    <script  async   src="https://cdn.commento.io/js/commento.js"></script>
+
     <!-- jQuery -->
     <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
 
@@ -202,3 +244,5 @@
     {% render_block "js" %}
 </body>
 </html>
+    
+
